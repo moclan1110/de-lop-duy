@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 3: Viết hàm sumOfListFibonacy() nhận vào một số nguyên x,
+    //hàm trả về giá trị là tổng các số fibonacy từ 0 cho tới x.
+    function sumOfListFibonacy(x) {
+        let arr = [0,1];
+        let a = 0;
+        let b = 1;
+        let temp;
+        let sum = 0;
+        for (i = 2; ; i++) {
+            if (a + b > x) break;
+            arr.push(a+b);
+            temp = a;
+            a = b;
+            b = temp + b;
+        }
+        for (i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum;
+    }
+    console.log(sumOfListFibonacy(40));
+</script>
+
+
+
+</body>
+</html>
